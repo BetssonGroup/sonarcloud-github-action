@@ -22,3 +22,5 @@ if [[ -z "${SONARCLOUD_URL}" ]]; then
 fi
 unset JAVA_HOME
 sonar-scanner -Dsonar.projectBaseDir=${INPUT_PROJECTBASEDIR} -Dsonar.host.url=${SONARCLOUD_URL} ${INPUT_ARGS}
+
+rm -rf ${INPUT_PROJECTBASEDIR}/.scannerwork
